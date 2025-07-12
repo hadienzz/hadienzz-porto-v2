@@ -2,31 +2,13 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
 
-const Loader = () => {
-    const [loading, setLoading] = useState(true)
-    const [textShowing, setTextShowing] = useState(false)
-    useEffect(() => {
-        const secondTextTimer = setTimeout(() => {
-            return setTextShowing(true)
-        }, 1500)
-
-        const loaderTimer = setTimeout(() => {
-            return setLoading(false)
-        }, 3000)
-
-        return () => {
-            clearTimeout(loaderTimer)
-            clearTimeout(secondTextTimer)
-        }
-
-    }, [])
-    console.log(loading)
+const Loader = ({ loading, textShowing }) => {
     return (
 
         <AnimatePresence>
             {loading && (
                 <motion.div
-                    className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 gap-2 fixed w-full"
+                    className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 gap-2 fixed w-full z-1000"
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -200 }}
                     transition={{ duration: 0.8, ease: 'easeInOut' }}
