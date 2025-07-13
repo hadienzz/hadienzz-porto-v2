@@ -6,9 +6,9 @@ const Navbar = () => {
         <header className="w-full border-b-[1px] border-[#4b5563] py-6  px-4 z-100">
             <div className="flex justify-between items-center lg:max-w-[1252px] mx-auto">
                 <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 4, duration: 1 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{  duration: 1, ease: 'easeIn' }}
                 >
                     Logo
                 </motion.div>
@@ -18,9 +18,9 @@ const Navbar = () => {
                     <p>LIST 3</p>
                 </nav>
                 <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 4, duration: 1 }}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{  duration: 1, ease: 'easeIn' }}
                 >
                     <Menu />
                 </motion.div>

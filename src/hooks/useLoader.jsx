@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 const useLoader = () => {
     const [loading, setLoading] = useState(true)
     const [textShowing, setTextShowing] = useState(false)
+    
     useEffect(() => {
         const secondTextTimer = setTimeout(() => {
             return setTextShowing(true)
