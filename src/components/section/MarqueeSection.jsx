@@ -20,14 +20,14 @@ const MarqueeSection = ({ topText, bottomText, className = "" }) => {
 
     return (
         <>
-            <section ref={containerRef} className={`py-20 overflow-hidden ${className}`}>
+            <section ref={containerRef} className={`py-20 overflow-hidden ${className} `}>
                 <motion.div style={{ scale, rotate }} className="space-y-8">
                     {/* Top Marquee */}
                     <div className="overflow-hidden">
                         <motion.div style={{ x: topX }} className="flex whitespace-nowrap">
                             <div className="inline-block whitespace-nowrap animate-marquee">
                                 {Array.from({ length: 10 }).map((_, i) => (
-                                    <span key={i} className="mr-12 text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 leading-none inline-block">
+                                    <span key={i} className="mr-12 text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 leading-none inline-block select-none">
                                         {topText}
                                     </span>
                                 ))}
@@ -40,7 +40,7 @@ const MarqueeSection = ({ topText, bottomText, className = "" }) => {
                         <motion.div className="flex whitespace-nowrap">
                             <div className="inline-block whitespace-nowrap animate-marquee-reverse">
                                 {Array.from({ length: 10 }).map((_, i) => (
-                                    <span key={i} className="mr-12 text-7xl md:text-8xl lg:text-9xl font-black text-gray-200 leading-none inline-block">
+                                    <span key={i} className="mr-12 text-7xl md:text-8xl lg:text-9xl font-black text-gray-200 leading-none inline-block select-none">
                                         {bottomText}
                                     </span>
                                 ))}
@@ -49,17 +49,6 @@ const MarqueeSection = ({ topText, bottomText, className = "" }) => {
                     </div>
                 </motion.div>
             </section>
-            <div className="overflow-hidden pt-12">
-                <motion.div className="flex whitespace-nowrap">
-                    <div className="inline-block whitespace-nowrap animate-marquee-reverse">
-                        {Array.from({ length: 10 }).map((_, i) => (
-                            <span key={i} className="mr-12 text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 leading-none inline-block">
-                                SKILLS • AND • EXPERTISE •
-                            </span>
-                        ))}
-                    </div>
-                </motion.div>
-            </div>
         </>
     );
 };
