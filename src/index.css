@@ -7,6 +7,19 @@
   --font-manrope: "Manrope", sans-serif;
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee 35s linear infinite reverse;
+  --animate-shine: shine 30s infinite linear;
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
 
   @keyframes marquee {
     0% {

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion"
-import { Card } from "../ui/card"
+import SkillsCard from "../custom/SkillsCard"
+import { skills } from "@/store/data"
 
 const SkillsSection = () => {
     return (
         <section>
-            <div className="overflow-hidden mt-16">
+            <header className="overflow-hidden mt-16">
                 <motion.div className="flex whitespace-nowrap">
                     <div className="inline-block whitespace-nowrap animate-marquee-reverse">
                         {Array.from({ length: 10 }).map((_, i) => (
@@ -14,13 +15,15 @@ const SkillsSection = () => {
                         ))}
                     </div>
                 </motion.div>
+            </header>
+
+            <div className="relative">
+                {skills.map((skill, index) => (
+                    <SkillsCard key={skill.name} skill={skill} index={index} />
+                ))}
             </div>
 
-            <article className="md:items-center sm:flex gap-8 items-center lg:max-w-[1252px] mx-auto justify-between pt-12">
-                
-            </article>
-
-        </section>
+        </section >
     )
 }
 

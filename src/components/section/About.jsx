@@ -18,11 +18,11 @@ const AboutSection = () => {
                     const start = index / words.length
                     const end = start + 1 / words.length
 
-                    const opacity = useTransform(scrollYProgress, [start, end], [0.3, 1])
+                    const opacity = useTransform(scrollYProgress, [start, end], [0.4, 1])
                     const color = useTransform(
                         scrollYProgress,
                         [start, end],
-                        ["rgb(60, 60, 60)", "rgb(97, 97, 97)"] // from gray-600 to white
+                        ["#FFF", "rgb(97, 97, 97)"] // from gray-600 to white
                     )
 
                     return (
