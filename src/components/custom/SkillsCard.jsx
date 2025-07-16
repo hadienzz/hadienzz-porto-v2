@@ -1,6 +1,7 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { ShineBorder } from "../magicui/shine-border"
+import { Badge } from "../ui/badge"
 
 
 const SkillsCard = ({ skill, index }) => {
@@ -37,21 +38,21 @@ const SkillsCard = ({ skill, index }) => {
                         transition={{ type: "spring", stiffness: 300 }}
                     >
                         <div className="w-80 h-80 bg-white rounded-3xl shadow-lg border border-gray-200 flex items-center justify-center relative overflow-hidden group cursor-pointer">
-                            <ShineBorder shineColor={['#831ED2']} borderWidth={2} />
+                            <ShineBorder shineColor={['#831ED2', '#AFE1AF']} borderWidth={2} />
                             <img className="w-[96px] mb-4" src={skill.icon} />
 
                             {/* Subtle hover effect */}
                             <div className="absolute inset-0 bg-gray-50 opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
 
                             {/* Category badge */}
-                            <div className="absolute top-6 right-6 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                            <Badge className="absolute top-6 right-6 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
                                 {skill.category}
-                            </div>
+                            </Badge>
 
                             {/* Level badge */}
-                            <div className="absolute bottom-6 left-6 px-3 py-1 bg-gray-900 text-white text-sm rounded-full">
+                            <Badge className="absolute bottom-6 left-6  bg-gray-900 text-white text-sm rounded-full">
                                 {skill.level}
-                            </div>
+                            </Badge>
                         </div>
                     </motion.div>
                     <div className={`space-y-6 shadow-lg ${isEven ? "md:order-2" : "md:order-1"}`}>

@@ -22,7 +22,7 @@ const AboutSection = () => {
                     const color = useTransform(
                         scrollYProgress,
                         [start, end],
-                        ["#FFF", "rgb(97, 97, 97)"] // from gray-600 to white
+                        ["rgb(60, 60, 60)", "rgb(97, 97, 97)"] // from gray-600 to white
                     )
 
                     return (

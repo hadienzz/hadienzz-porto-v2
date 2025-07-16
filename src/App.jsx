@@ -11,7 +11,7 @@ const App = () => {
   // const { loading, textShowing } = useLoader()
 
   return (
-    <div className="relative overflow-hidden ">
+    <div className="relative overflow-hidden font-manrope">
       {/* <Loader loading={loading} textShowing={textShowing} /> */}
       {/* {!loading && (
         <>

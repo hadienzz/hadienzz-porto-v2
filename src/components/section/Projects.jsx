@@ -1,4 +1,6 @@
 import { motion } from "framer-motion"
+import SkillsCard from "../custom/SkillsCard"
+import ProjectCard from "../custom/ProjectCard"
 
 const ProjectsSection = () => {
     return (
@@ -15,7 +17,7 @@ const ProjectsSection = () => {
                 </motion.div>
             </header>
             <div>
-
+                <ProjectCard />
             </div>
         </section>
     )
