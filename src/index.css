@@ -8,14 +8,17 @@
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee 35s linear infinite reverse;
   --animate-shine: shine 30s infinite linear;
+  --font-vollkorn: "Vollkorn", sans-serif;
 
   @keyframes shine {
     0% {
       background-position: 0% 0%;
     }
+
     50% {
       background-position: 100% 100%;
     }
+
     to {
       background-position: 0% 0%;
     }
@@ -25,11 +28,13 @@
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-50%);
     }
   }
 }
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -143,6 +148,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
