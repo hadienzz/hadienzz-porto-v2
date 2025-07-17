@@ -1,9 +1,9 @@
-import htmlIcon from '../public/html.png'
-import expressIcon from '../public/express.png'
-import nextIcon from '../public/next.png'
-import javascriptIcon from '../public/javascript.png'
-import tailwindIcon from '../public/tailwind.png'
-import reactIcon from '../public/react.png'
+import htmlIcon from '/html.png'
+import expressIcon from '/express.png'
+import nextIcon from '/next.png'
+import javascriptIcon from '/javascript.png'
+import tailwindIcon from '/tailwind.png'
+import reactIcon from '/react.png'
 
 export const skills = [
     {

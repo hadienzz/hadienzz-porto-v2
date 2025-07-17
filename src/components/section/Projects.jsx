@@ -16,7 +16,7 @@ const ProjectsSection = () => {
                     </div>
                 </motion.div>
             </header>
-            <div>
+            <div className="py-20">
                 <ProjectCard />
             </div>
         </section>
