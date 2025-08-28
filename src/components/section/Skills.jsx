@@ -1,30 +1,22 @@
-import { motion } from "framer-motion"
-import SkillsCard from "../custom/SkillsCard"
-import { skills } from "@/store/data"
+import { motion } from "framer-motion";
+import SkillsCard from "../custom/SkillsCard";
+import { skills } from "@/store/data";
+import Marquee from "../custom/Marquee";
 
 const SkillsSection = () => {
-    return (
-        <section>
-            <header className="overflow-hidden mt-16">
-                <motion.div className="flex whitespace-nowrap">
-                    <div className="inline-block whitespace-nowrap animate-marquee-reverse">
-                        {Array.from({ length: 10 }).map((_, i) => (
-                            <span key={i} className=" text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 leading-none inline-block select-none">
-                                SKILLS • AND • EXPERTISE •
-                            </span>
-                        ))}
-                    </div>
-                </motion.div>
-            </header>
+  return (
+    <section>
+      <div className="mt-16">
+        <Marquee letter={"EXPERTISE • SKILLS •"} />
+      </div>
 
-            <div className="relative">
-                {skills.map((skill, index) => (
-                    <SkillsCard key={skill.name} skill={skill} index={index} />
-                ))}
-            </div>
+      <div className="relative">
+        {skills.map((skill, index) => (
+          <SkillsCard key={skill.name} skill={skill} index={index} />
+        ))}
+      </div>
+    </section>
+  );
+};
 
-        </section >
-    )
-}
-
-export default SkillsSection
+export default SkillsSection;
