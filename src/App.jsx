@@ -9,27 +9,26 @@ import SkillsSection from "./components/section/Skills";
 import useLoader from "./hooks/useLoader";
 
 const App = () => {
-  // const { loading, textShowing } = useLoader();
+  const { loading, textShowing } = useLoader();
 
   return (
     <div className="relative overflow-hidden font-manrope">
-      {/* <Loader loading={loading} textShowing={textShowing} /> */}
-      {/* {!loading && (
+      <Loader loading={loading} textShowing={textShowing} />
+      {!loading && (
         <>
+          {/* <Navbar /> */}
+          <HeroSection />
+          <MarqueeSection
+            topText="FULLSTACK • DEVELOPER • "
+            bottomText="FRONT • END • DEVELOPER"
+            className="bg-gray-50"
+          />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <CertificateSection />
         </>
-      )
-    } */}
-      <Navbar />
-      <HeroSection />
-      <MarqueeSection
-        topText="FULLSTACK • DEVELOPER • "
-        bottomText="FRONT • END • DEVELOPER"
-        className="bg-gray-50"
-      />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <CertificateSection />
+      )}
     </div>
   );
 };
